@@ -249,6 +249,9 @@ img {
 
 
 /*TEAM*/
+.section team{
+    padding-bottom: 92px;}
+
 .team{
     background-color: var(--bg-btn);}
 
