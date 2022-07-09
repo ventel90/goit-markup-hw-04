@@ -251,7 +251,7 @@ img {
 
 
 /*TEAM*/
-.section team{
+.section-team{
     padding-bottom: 92px;}
 
 .team{
@@ -287,8 +287,7 @@ img {
     background-color: var(--bg-soc-link);
     width: 44px;
     height: 44px;
-    border-radius: 50%;
-}
+    border-radius: 50%;}
 
 .social-list .social-link:not(:last-child),
 .footer-social-list .social-link:not(:last-child) {
@@ -311,9 +310,7 @@ img {
     justify-content: center;
     padding: 16px 32px;
     border: 1px solid #AFB1B8;
-    border-radius: 4px;
-/*border: 1px solid var(--accent-color);
-    border-radius: 4px;*/}
+    border-radius: 4px;}
 
 .clients-list .clients-item:not(:last-child) {
     margin-right: var(--cards-set-gap);}
@@ -333,6 +330,11 @@ img {
 .footer{
     padding-top: 60px;
     padding-bottom: 60px;}
+
+.footer-list {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;}
 
 .footer .logo{
     margin-bottom: 20px;
@@ -359,16 +361,6 @@ img {
 .footer-contacts:hover,
 .footer-contacts:focus {
     color: var(--accent-color);}
-
-.footer-contacts:hover,
-.footer-contacts:focus {
-    color: var(--accent-color);}
-
-.footer-list{
-    display: flex;
-    gap: 70px;
-    align-items: baseline;}
-
 
 .footer-follow{
     margin-bottom: 20px;
