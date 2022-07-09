@@ -9,14 +9,20 @@
     --white: #FFFFFF;
     --black: #000000;
     --border: #ECECEC;
+    --soc-icon: #AFB1B8;
     --border-card: 1px solid #EEEEEE;
     --gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
     --cards-set-gap: 30px;
     --cards-item: 3;
-    --box-shadow:0px 1px 3px rgba(0, 0, 0, 0.12),
+    --box-shadow-team: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
-    --team-br: 0px 0px 4px 4px;}
+    --box-shadow-portfolio: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    --box-shadow-filt-but: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);}
     
 body {
     font-family: 'Roboto', sans-serif;
@@ -133,7 +139,6 @@ img {
 .contacts .icon{
     fill: currentColor;
     align-self: center;
-    justify-content: center;
     margin-right: 10px;}
 
 
@@ -143,19 +148,17 @@ img {
     background-color: var(--bg-color)}
 .hero{
     max-width: 1600px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-image: var(--gradient),
             url(../images/main-fon.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;}
-
-.hero {
+    background-size: cover;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;}
+
 
 .hero-title {
     margin-bottom: 30px;
@@ -209,7 +212,6 @@ img {
 
 .thumb{
     display: flex;
-    width: 270px;
     height: 120px;
     background-color: var(--bg-btn);
     border-radius: 4px;
@@ -258,7 +260,7 @@ img {
 .team-list>.cards-item{
     background-color: var(--white);
     border-radius: var(--team-br);
-    box-shadow: var(--box-shadow)}
+    box-shadow: var(--box-shadow-team)}
 
 .team-title,
 .team-text {
@@ -277,30 +279,33 @@ img {
 .team-text{
     margin-bottom: 16px;}
 
-.social-link{
-    display: inline-block;
-    align-self: center;
+.social-link .link{
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 12px;}
+    color: var(--soc-icon);
+    background-color: var(--bg-soc-link);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
 
 .social-list .social-link:not(:last-child),
 .footer-social-list .social-link:not(:last-child) {
     margin-right: 10px;}
 
-.social-list .social-link:hover,
-.social-list .social-link:focus{
+.social-link .link:hover,
+.social-link .link:focus{
     color: var(--white);
-    background-color: var(--accent-color);
-    border-radius: 50%;}
+    background-color: var(--accent-color);}
 
 
 /*CLIENTS*/
 .clients-list,
 .social-list{
-    display: flex;
-    justify-content: center;}
+    display: flex;}
 
-.clients-item{
+.clients-item .link{
     display: flex;
     align-self: center;
     justify-content: center;
@@ -318,11 +323,10 @@ img {
     display: flex;
     fill: currentColor;}
 
-.clients-list .clients-item:hover,
-.clients-list .clients-item:focus {
+.clients-item .link:hover,
+.clients-item .link:focus {
     color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;}
+    border: 1px solid var(--accent-color);}
 
 
 /*FOOTER*/
@@ -361,27 +365,19 @@ img {
     color: var(--accent-color);}
 
 .footer-list{
-    display: flex;}
+    display: flex;
+    gap: 70px;
+    align-items: baseline;}
 
-.footer-address-item{
-    margin-right: 70px;}
 
 .footer-follow{
-    padding-top: 12px;
     margin-bottom: 20px;
     color: var(--white);}
 
-.footer-social-list>.social-link{
-    fill: currentColor;
-    color: var(--white);
-    background-color: var(--bg-soc-link);
-    border-radius: 50%;}
+.footer .social-link .link{
+    color: var(--white);}
 
-.footer-social-list>.social-link:hover,
-.footer-social-list>.social-link:focus {
-    color: var(--white);
-    background-color: var(--accent-color);
-    border-radius: 50%;}
+
 /*ПОРТФОЛИО*/
 /*BTNS*/
 .btn-list {
@@ -410,12 +406,18 @@ img {
 .filter-button:focus {
     color: var(--white);
     background: var(--accent-color);
-    box-shadow: var(--box-shadow);}
-/*PORTFOLIO*/
+    box-shadow: var(--box-shadow-filt-but);}
 
-.portfolio-list>.cards-item:hover{
+
+    /*PORTFOLIO*/
+.portfolio-list .link{
+    display: flex;
+    flex-direction: column;}
+
+.portfolio-list .cards-item .link:hover,
+.portfolio-list .cards-item .link:focus {
     background: var(--white);
-    box-shadow: var(--box-shadow)}
+    box-shadow: var(--box-shadow-portfolio)}
 
 .cards-content {
     padding: 20px 24px;
